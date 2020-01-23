@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-96040f01817ac0a5fd74.js"
+    "url": "webpack-runtime-808eead02ab71d268c00.js"
   },
   {
     "url": "commons-4fd2d547929a26f8aa2d.js"
   },
   {
-    "url": "app-eac4d8fd1d6cb2e9f15b.js"
+    "url": "app-c28baa96d82fd6f64dea.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-58be84fb0a4e567a4acb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "3de233b7ed5c2f7024227c73dca14809"
+    "revision": "4b6a812d0a7a4fd2bb7acb7289687a28"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -136,12 +136,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/20-min-wpa-tutorial`), ``)
+  pathname = pathname.replace(new RegExp(`^/20-min-pwa-tutorial`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/20-min-wpa-tutorial/app-eac4d8fd1d6cb2e9f15b.js`))) {
+  if (!resources || !(await caches.match(`/20-min-pwa-tutorial/app-c28baa96d82fd6f64dea.js`))) {
     return await fetch(event.request)
   }
 
@@ -154,7 +154,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/20-min-wpa-tutorial/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/20-min-pwa-tutorial/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
