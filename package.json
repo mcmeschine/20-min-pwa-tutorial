@@ -30,13 +30,13 @@
     "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public && npm run move",
     "build": "gatsby build",
     "develop": "gatsby develop",
-	"dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
+	  "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-	"move": "cd public && mkdir 20-min-pwa-tutorial | move * 20-min-pwa-tutorial"
+	  "move": "cd public && mkdir 20-min-pwa-tutorial | move * 20-min-pwa-tutorial"
   },
   "repository": {
     "type": "git",
