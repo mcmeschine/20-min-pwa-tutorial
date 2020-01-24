@@ -21,7 +21,7 @@ module.exports = {
       options: {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
-        start_url: `/`,
+        start_url: `/20-min-pwa-tutorial`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
         display: `minimal-ui`,
